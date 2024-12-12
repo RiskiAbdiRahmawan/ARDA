@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pools', function (Blueprint $table) {
-            $table->id('pool_id');
-            $table->string('nama_pool');
-            $table->string('lokasi');
-            $table->rememberToken();
+        Schema::create('kendaraans', function (Blueprint $table) {
+            $table->id('kendaraan_id');
+            $table->string('nama');
+            $table->enum('jenis',['angkutan orang','angkutan barang']);
+            $table->enum('status',['tersedia','tidak Tersedia']);
+            $table->foreignId('user_id')->constrained('users','user_id');
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('kendaraans');
     }
 };

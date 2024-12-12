@@ -28,10 +28,12 @@ class LoginController extends Controller
 
             // Arahkan pengguna ke dashboard berdasarkan role mereka
             if ($user->role === 'admin') {
-                return "Berhasil Login Admin";
+                return redirect()->route('admin.dashboard');
+                // return "Berhasil Login Admin";
                 // return redirect()->route('Pemilik.Dashboard'); // Route untuk dashboard pemilik
             } elseif ($user->role === 'manager') {
-                return "Berhasil Login Manager";
+                return redirect()->route('manager.dashboard');
+                // return "Berhasil Login Manager";
                 // return redirect()->route('Agent.Dashboard'); // Route untuk dashboard agent
             }
         }else{

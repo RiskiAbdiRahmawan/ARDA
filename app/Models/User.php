@@ -26,11 +26,6 @@ class User extends Authenticatable
         // 'pool_id', // Tidak perlu lagi karena sudah menjadi primary key
     ];
 
-    public function pool()
-    {
-        return $this->belongsTo(Pool::class);
-    }
-
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -52,5 +47,17 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function driver(){
+        return $this->hasMany(Driver::class,'user_id');
+    }
+
+    public function kendaraan(){
+        return $this->hasMany(Kendaraan::class,'user_id');
+    }
+
+    public function pemesanan(){
+        return $this->hasMany(Kendaraan::class,'user_id');
     }
 }

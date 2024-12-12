@@ -20,7 +20,6 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@example.com',
             'password' => Hash::make('adminutama'),
             'role' => 'admin',
-            'id_pool' => 1, // Adjust the pool ID as needed
         ]);
 
         User::create([
@@ -29,7 +28,6 @@ class UsersTableSeeder extends Seeder
             'email' => 'manager@example.com',
             'password' => Hash::make('manageroperasional'),
             'role' => 'manager',
-            'id_pool' => 1, // Adjust the pool ID as needed
         ]);
     }
 }
