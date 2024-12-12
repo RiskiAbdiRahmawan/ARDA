@@ -17,11 +17,19 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
+    protected $primaryKey = 'user_id';
     protected $fillable = [
         'name',
         'email',
         'password',
+        'role',
+        // 'pool_id', // Tidak perlu lagi karena sudah menjadi primary key
     ];
+
+    public function pool()
+    {
+        return $this->belongsTo(Pool::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
