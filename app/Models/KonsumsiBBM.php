@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class KonsumsiBBM extends Model
 {
     protected $primaryKey = 'konsumsi_bbm_id';
+    protected $table = 'konsumsi_bbm'; // Pastikan ini sesuai dengan nama tabel di database
     protected $fillable = [
         'kendaraan_id',
         'tanggal',
