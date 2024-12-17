@@ -23,7 +23,7 @@ class PemesananController extends Controller
         $role = $user->role; // Default ke 'User' jika null
         $users = User::all();
         $kendaraans = Kendaraan::where('status', 'tersedia')->get(); // Hanya kendaraan dengan status 'tersedia'
-        $drivers = Driver::all();
+        $drivers = Driver::where('status','tersedia')->get();
         // Ambil semua data pemesanan dengan relasi
         $pemesanans = Pemesanan::with(['user', 'driver', 'kendaraan'])->get();
         return view('Pemesanan', compact('pemesanans', 'email', 'role', 'users', 'kendaraans', 'drivers'));
@@ -152,6 +152,10 @@ class PemesananController extends Controller
             $kendaraan = Kendaraan::findOrFail($pemesanan->kendaraan_id);
             $kendaraan->status = 'tidak tersedia';
             $kendaraan->save();
+            // Perbarui status kendaraan menjadi 'tidak tersedia'
+            $driver = Driver::findOrFail($pemesanan->driver_id);
+            $driver->status = 'tidak tersedia';
+            $driver->save();
 
             // Tambahkan langsung riwayat pemakaian kendaraan
             RiwayatPemakaian::create([
