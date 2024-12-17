@@ -13,6 +13,7 @@
                 <tr class="bg-gray-100">
                     <th class="border px-4 py-2">ID</th>
                     <th class="border px-4 py-2">Nama</th>
+                    <th class="border px-4 py-2">Status</th>
                     <th class="border px-4 py-2">Nomor Lisensi</th>
                     <th class="border px-4 py-2">Nomor Telepon</th>
                     <th class="border px-4 py-2">Actions</th>
@@ -23,6 +24,7 @@
                     <tr>
                         <td class="border px-4 py-2">{{ $driver->driver_id }}</td>
                         <td class="border px-4 py-2">{{ $driver->nama }}</td>
+                        <td class="border px-4 py-2">{{ $driver->status }}</td>
                         <td class="border px-4 py-2">{{ $driver->nomor_lisensi }}</td>
                         <td class="border px-4 py-2">{{ $driver->nomor_telepon }}</td>
                         <td class="border px-4 py-2">
