@@ -1,66 +1,107 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Nama: Riski Abdi Rahmawan
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Email dan Password**
 
-## About Laravel
+1. admin@example.com => adminutama
+2. supervisor@example.com => supervisor
+3. manager@example.com => manageroperasional
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Database Version**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+MySQL 8.0.30
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**PHP Version**
 
-## Learning Laravel
+PHP 8.3.12
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Framework**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. Laravel 11
+2. TailwindCSS
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Panduan Penggunaan**
+1. Login dan Logout
 
-## Laravel Sponsors
+1.1 Login: Pengguna memasukkan email dan password untuk mengakses sistem. Berdasarkan peran (admin atau manager), pengguna akan diarahkan ke dashboard masing-masing.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1.2 Logout: Pengguna dapat keluar dari sistem untuk mengamankan sesi.
 
-### Premium Partners
+2. Manajemen Kendaraan
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+2.1 Tambah Kendaraan: Formulir kendaraan dapat diakses melalui modal pop-up.
 
-## Contributing
+2.2 Edit Kendaraan: Data kendaraan yang sudah ada dapat diperbarui sesuai kebutuhan.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2.3 Hapus Kendaraan: kendaraan yang tidak diperlukan lagi dapat dihapus.
 
-## Code of Conduct
+3. Manajemen Driver
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3.1 Tambah Driver: Formulir driver dapat diakses melalui modal pop-up.
 
-## Security Vulnerabilities
+2.2 Edit Driver: Data driver yang sudah ada dapat diperbarui sesuai kebutuhan.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2.3 Hapus Driver: driver yang tidak diperlukan lagi dapat dihapus.
 
-## License
+4. Manajemen User
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+4.1 Tambah User: Formulir user dapat diakses melalui modal pop-up.
+
+4.2 Edit User: Data user yang sudah ada dapat diperbarui sesuai kebutuhan.
+
+4.3 Hapus User: user yang tidak diperlukan lagi dapat dihapus.
+
+5. Manajemen Pemesanan
+
+5.1 Tambah Pemesanan: Formulir pemesanan dapat diakses melalui modal pop-up.
+
+5.2 Edit Pemesanan: Data pemesanan yang sudah ada dapat diperbarui sesuai kebutuhan.
+
+5.3 Hapus Pemesanan: pemesanan yang tidak diperlukan lagi dapat dihapus.
+
+6. Persetujuan Pemesanan (Supervisor & Manager)
+
+3.1 Supervisor (Manager 1) dan Manager Operasional (Manager 2) memiliki kewenangan untuk menyetujui atau menolak pemesanan kendaraan.
+
+7. Riwayat Pemakaian Kendaraan
+
+7.1 Menampilkan semua data kendaraan yang sudah digunakan, mencakup detail pemesan, kendaraan, driver, dan status.
+
+8. Log Aktivitas Sistem
+
+8.1 Semua perubahan pada data (menambah, mengubah, menghapus pemesanan, login, dan logout) dicatat secara otomatis dalam tabel log.
+
+9. Export Data ke CSV
+
+9.1 Data pemesanan kendaraan dapat diekspor dalam format CSV untuk pelaporan atau analisis lebih lanjut.
+
+**Langkah Penggunaan Sistem**
+
+1. Login ke Sistem
+
+1.1 Masukkan Email dan Password Anda pada form login.
+1.2 Setelah berhasil login:
+    1.2.1 Admin: Akses dashboard admin.
+    1.2.2 Manager: Akses dashboard manager.
+
+2. Kelola Pemesanan
+
+2.1 Tambah Pemesanan:
+
+2.1.1 Klik tombol Create Pemesanan di dashboard.
+
+2.1.2 Isi formulir yang muncul, termasuk user, driver, kendaraan, tanggal pemesanan, dan status.
+
+2.1.3 Klik Save untuk menyimpan.
+
+2.2 Edit Pemesanan:
+
+2.2.1 Klik tombol Edit pada pemesanan yang ingin diubah.
+
+2.2.2 Perbarui data di formulir yang muncul.
+
+2.2.3 Klik Save.
+
+2.3 Hapus Pemesanan:
+
+2.3.1 Klik tombol Delete pada pemesanan yang ingin dihapus.
+2.3.2 Konfirmasi penghapusan.
